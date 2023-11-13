@@ -20,7 +20,9 @@ export default function Home() {
 						<label htmlFor="number">จำนวนเงิน</label>
 						<input type="number" placeholder="จำนวน" className="w-full text-black p-1 border-2 border-pink-400 focus:border-blue-600 rounded-md outline-none" value={amount} onChange={(e) => setAmount(e.target.value)} />
 					</div>
-					<Link href={`/${amount}/${phoneNumber}`} className="block text-center bg-gradient-to-tr from-blue-600 to-pink-500 text-white w-full py-2 rounded-md hover:scale-95 transition duration-75">สร้าง QR Code</Link>
+					{(phoneNumber && amount) && (
+						<Link href={`/${amount}/${phoneNumber}`} className="block text-center bg-gradient-to-tr from-blue-600 to-pink-500 text-white w-full py-2 rounded-md hover:scale-95 transition duration-75">สร้าง QR Code</Link>
+					)}
 				</form>
 			</div>
 		</>

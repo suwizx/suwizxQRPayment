@@ -7,6 +7,7 @@ import ReactQR from 'react-qr-code'
 export default function Home({params}) {
 
 	const amount = Number(params.amount)
+    const phoneNumber = params.phoneNumber
     const [qrCode , setQrCode] = useState(generatePayload('0924596451',{amount}))
 
 	return (
@@ -20,7 +21,7 @@ export default function Home({params}) {
 					</div>
 					<ReactQR style={{maxWidth:"100%",aspectRatio:"1/1",height:"auto"}} value={qrCode} className='mx-auto' />
 					<div className="w-full text-center py-4">
-						<h2>นายสุวิจักขณ์ พรหมสถิตย์</h2>
+						<h2>ปลายทาง : {phoneNumber}</h2>
 						<h1 className='text-xl font-bold'><span className='text-3xl text-transparent bg-clip-text bg-gradient-to-tr from-blue-600 to-pink-500 bg-white'>{amount}</span> บาท</h1>
 					</div>
 				</div>

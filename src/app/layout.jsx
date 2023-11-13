@@ -5,11 +5,6 @@ import './globals.css'
 
 const inter = Kanit({weight:"400",preload:false})
 
-// export const metadata = {
-//   title: 'Suwizx QR Payment',
-//   description: 'จ่ายตังให้ปักษ์ยังไงล่า',
-// }
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
